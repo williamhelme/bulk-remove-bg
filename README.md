@@ -47,3 +47,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 * [remove.bg](https://remove.bg/) for their product
 * [Onur Yıldırım](https://github.com/onury) for building invert-color
+* [Lokesh Dhakar](https://github.com/lokesh/) for building Color Thief
