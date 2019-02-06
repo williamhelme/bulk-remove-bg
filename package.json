@@ -1,0 +1,28 @@
+{
+  "name": "bulk-remove-bg",
+  "version": "1.0.0",
+  "description": "Clustered Node Server to remove an images background in bulk (using remove.bg api). Using Color Thief and invert-color to find an adequate contrast background color.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamhelme/bulk-remove-bg.git"
+  },
+  "keywords": [
+    "remove.bg",
+    "color-thief",
+    "invert-color",
+    "cluster"
+  ],
+  "author": "William Helme",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/williamhelme/bulk-remove-bg/issues"
+  },
+  "homepage": "https://github.com/williamhelme/bulk-remove-bg#readme",
+  "dependencies": {
+    "cluster": "^0.7.7",
+    "color-thief": "^2.2.3",
+    "invert-color": "^2.0.0",
+    "restify": "^7.7.0"
+  }
+}
