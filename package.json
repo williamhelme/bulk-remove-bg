@@ -22,7 +22,11 @@
   "dependencies": {
     "cluster": "^0.7.7",
     "color-thief": "^2.2.3",
+    "config": "^3.0.1",
     "invert-color": "^2.0.0",
     "restify": "^7.7.0"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
