@@ -1,10 +1,16 @@
-const config = require("config");
-const cluster = require("cluster");
-const numCPUs = require("os").cpus().length;
-const restify = require("restify");
+import cluster from "cluster";
+import OS from "os";
+import server from "api/server/";
+
+cluster.on("exit", (worker, code, signal) => {
+  console.log(`worker ${worker.process.pid} died`);
+  cluster.fork();
+});
 
 if (cluster.isMaster) {
   console.log(`Master ${process.pid} is running`);
+
+  const numCPUs = OS.cpus().length;
 
   // Fork workers.
   var i = 0;
@@ -12,15 +18,8 @@ if (cluster.isMaster) {
     cluster.fork();
     i++;
   }
-
-  cluster.on("exit", (worker, code, signal) => {
-    console.log(`worker ${worker.process.pid} died`);
-  });
+} else if (cluster.isWorker) {
+  server.create();
 } else {
-  var server = restify.createServer();
-
-  server.listen(config.get("port"), function() {
-    console.log("%s listening at %s:%s", server.name, server.url);
-  });
-  console.log(`Worker ${process.pid} started`);
+  console.log("Cluster is neither master or worker", cluster);
 }

@@ -20,13 +20,24 @@
   },
   "homepage": "https://github.com/williamhelme/bulk-remove-bg#readme",
   "dependencies": {
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "buffer-image-size": "^0.6.4",
     "cluster": "^0.7.7",
     "color-thief": "^2.2.3",
     "config": "^3.0.1",
     "invert-color": "^2.0.0",
-    "restify": "^7.7.0"
+    "jimp": "^0.6.0",
+    "mime": "^2.4.0",
+    "remove.bg": "^1.0.1",
+    "request": "^2.88.0",
+    "restify": "^7.7.0",
+    "rgb-hex": "^2.1.0",
+    "tmp-promise": "^1.0.5"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node start.js"
   }
 }
