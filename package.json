@@ -29,7 +29,7 @@
     "color-thief": "^2.2.3",
     "config": "^3.0.1",
     "invert-color": "^2.0.0",
-    "jimp": "^0.6.0",
+    "jimp": "^0.22.7",
     "mime": "^2.4.0",
     "remove.bg": "^1.0.1",
     "request": "^2.88.0",
